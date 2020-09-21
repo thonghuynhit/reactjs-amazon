@@ -11,13 +11,14 @@ function Product({ id, title, price, rating, image }) {
                 id: id,
                 title: title,
                 image: image,
+                price: price,
                 rating: rating
             }
         })
     }
 
     return (
-        <div className="product ">
+        <div className="product">
             <p>{ title }</p>
             <p className="product__price">
                 <small>$</small>
