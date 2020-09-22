@@ -89,3 +89,11 @@
     color: rgb(73, 62, 10);
     transform: translateX(-50%);
 }
+@media only screen and (max-width: 500px) {
+    .search  {
+        display:  none;
+    }
+    .header__nav {
+        flex: 1;
+    }
+}

@@ -5,10 +5,10 @@ import { useStateValue } from './StateProvider'
 function ProductCheckout({id, title, price, image, rating}) {
     const [{basket}, dispatch] = useStateValue()
     const removeBasket = () => {
-        // dispatch({
-        //     type: "REMOVE_FROM_BASKET",
-        //     id: id
-        // })
+        dispatch({
+            type: "REMOVE_FROM_BASKET",
+            id: id
+        })
         console.log(id)
     }
     return (

@@ -9,7 +9,14 @@ function reducer(state, action) {
             return { ...state, basket: [...state.basket, action.item] }
             break
         case "REMOVE_FROM_BASKET":
-            return { state }
+            let  newBasket = [...state.basket]
+            const index = state.basket.findIndex(item => item.id === action.id)
+            if (index >= 0) {
+                newBasket.splice(index, 1)
+            } else {
+                console.warn(`Can't remove ${action.id}`)
+            }
+            return { ...state, basket: newBasket }
             break
         default:
              return state

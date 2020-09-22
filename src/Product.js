@@ -9,6 +9,7 @@ function Product({ id, title, price, rating, image }) {
             type: "ADD_TO_BASKET",
             item: {
                 id: id,
+                timestamp: new Date(),
                 title: title,
                 image: image,
                 price: price,
